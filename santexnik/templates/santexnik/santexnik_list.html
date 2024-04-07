@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Santexnik List{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Santexnik List</h1>
+    <div class="table-responsive mt-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <!-- Add more table headers if needed -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for santexnik in santexnik %}
+                <tr>
+                    <td>{{ santexnik.name }}</td>
+                    <td>{{ santexnik.email }}</td>
+                    <td>{{ santexnik.phone }}</td>
+                    <!-- Add more table cells if needed -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
